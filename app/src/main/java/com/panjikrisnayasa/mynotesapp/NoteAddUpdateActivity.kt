@@ -3,6 +3,7 @@ package com.panjikrisnayasa.mynotesapp
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -135,9 +136,9 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         showAlertDialog(ALERT_DIALOG_CLOSE)
+        return super.onKeyDown(keyCode, event)
     }
 
     private fun getCurrentDate(): String {
