@@ -106,9 +106,9 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
                 values.put(DatabaseContract.NoteColumns.DATE, getCurrentDate())
 
                 val result = noteHelper.insert(values)
-                if (result == 1.toLong()) {
-                    noteHelper.insert(values)
-                }
+//                if (result == 1.toLong()) {
+//                    noteHelper.insert(values)
+//                }
                 if (result > 0) {
                     note?.id = result.toInt()
                     setResult(RESULT_ADD, intent)
