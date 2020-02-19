@@ -1,4 +1,4 @@
-package com.panjikrisnayasa.mynotesapp
+package com.panjikrisnayasa.consumerapp
 
 import android.content.ContentValues
 import android.content.Intent
@@ -11,10 +11,9 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.panjikrisnayasa.mynotesapp.db.DatabaseContract
-import com.panjikrisnayasa.mynotesapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
-import com.panjikrisnayasa.mynotesapp.db.NoteHelper
-import com.panjikrisnayasa.mynotesapp.helper.MappingHelper
+import com.panjikrisnayasa.consumerapp.db.DatabaseContract
+import com.panjikrisnayasa.consumerapp.db.DatabaseContract.NoteColumns.Companion.CONTENT_URI
+import com.panjikrisnayasa.consumerapp.helper.MappingHelper
 import kotlinx.android.synthetic.main.activity_note_add_update.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -36,14 +35,11 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
     private var isEdit = false
     private var note: Note? = null
     private var position: Int = 0
-    private lateinit var noteHelper: NoteHelper
     private lateinit var uriWithId: Uri
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_note_add_update)
-
-        noteHelper = NoteHelper.getInstance(applicationContext)
 
         note = intent.getParcelableExtra(EXTRA_NOTE)
         if (note != null) {

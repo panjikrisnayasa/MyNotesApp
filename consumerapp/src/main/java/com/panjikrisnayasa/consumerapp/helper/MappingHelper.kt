@@ -1,8 +1,8 @@
-package com.panjikrisnayasa.mynotesapp.helper
+package com.panjikrisnayasa.consumerapp.helper
 
 import android.database.Cursor
-import com.panjikrisnayasa.mynotesapp.Note
-import com.panjikrisnayasa.mynotesapp.db.DatabaseContract
+import com.panjikrisnayasa.consumerapp.Note
+import com.panjikrisnayasa.consumerapp.db.DatabaseContract
 
 object MappingHelper {
 

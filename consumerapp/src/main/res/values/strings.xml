@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ConsumerApp</string>
+    <string name="edt_title">Title</string>
+    <string name="edt_description">Description</string>
+    <string name="btn_submit">Submit</string>
+    <string name="action_delete">Delete</string>
+</resources>
