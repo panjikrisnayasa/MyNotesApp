@@ -1,6 +1,6 @@
 # MyNotesApp
 
-A simple app that implements SQLite for local database
+A simple app that implements SQLite for local database.
 
 ![Screenshot_20201119-122549](https://user-images.githubusercontent.com/48062932/99621812-bf077d00-2a63-11eb-8c28-8171b56f7f9b.jpg)
 
